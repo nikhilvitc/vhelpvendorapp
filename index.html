@@ -1478,17 +1478,21 @@
         });
 
         // Add download functionality
-        document.querySelectorAll('.btn-primary').forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
+      // Add download functionality
+document.querySelectorAll('.btn-primary').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
 
-                // Trigger actual file download
-                const downloadLink = document.createElement('a');
-                downloadLink.href = "https://drive.google.com/uc?export=download&id=12NmyOv1A6YvGhTu5Uj7z6OV8CppQyjwe";
-                downloadLink.download = "VHELPCC-App.apk"; // Suggested filename
-                document.body.appendChild(downloadLink);
-                downloadLink.click();
-                document.body.removeChild(downloadLink);
+        // Trigger actual file download
+        const downloadLink = document.createElement('a');
+        downloadLink.href = "https://github.com/V-Help/V-HELP-ADMIN/releases/download/v1.0.0/VHELP.apk";
+        downloadLink.download = "VHELP-Admin.apk";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+
+        // Show notification ...
+
 
                 // Show notification
                 const notification = document.createElement('div');
